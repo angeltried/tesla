@@ -1,24 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 function Section({ title, description, leftBtnText, rightBtnText, backgroundImg}) {
   return (
     <Wrap bgImage={backgroundImg}>
+      <Fade bottom>
       <ItemText>
         <h1>{title}</h1>
         <p>{description}</p>
       </ItemText>
+      </Fade>
       <Buttons>
-        <ButtonGroup>
+       <Fade>
+       <ButtonGroup>
           <LeftButton>
             {leftBtnText}
           </LeftButton>
           { rightBtnText &&
-            <RightButton>
+             <RightButton>
               {rightBtnText}
             </RightButton>
           }
         </ButtonGroup>
+       </Fade>
         <DownArrow src="/images/down-arrow.svg"/>
       </Buttons>
     </Wrap>
@@ -38,18 +43,25 @@ const Wrap = styled.div`
  flex-direction: column;
  justify-content: space-between;
  align-items: center;
- cursor: pointer;
  background-image: ${props => `url("/images/${props.bgImage}")`}
 
 `
 const ItemText = styled.div`
   text-align: center;
   padding-top:15vh;
+  h1{
+    font-weight: 500;
+    font-size: 45px;
+    margin-bottom: 12px;
+  }
+  p{
+    letter-spacing: 0.15rem;
+  }
 `
 
 const ButtonGroup = styled.div`
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   @media (max-width: 786px) {
     flex-direction: column;
   }
@@ -59,16 +71,19 @@ const LeftButton = styled.div`
   background-color: rgba(23, 26, 32, 0.8);
   color: #fff;
   height: 40px;
-  width: 256px;
+  width: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100px;
-  opacity: 0.85;
-  text-transform: uppercase;
-  font-size: 12px;
+  border-radius: 5px;
+  opacity: 1;
+  font-size: 15px;
   margin: 8px;
+  cursor: pointer;
 
+  @media (max-width: 786px) {
+    width:450px;
+  }
 `
 
 const RightButton = styled(LeftButton)`
@@ -82,6 +97,9 @@ margin-top: 20px;
 height: 40px;
 overflow-x: hidden;
 animation: animateDown infinite 1.5s;
+cursor: pointer;
 `
 
-const Buttons = styled.div``
+const Buttons = styled.div`
+margin-bottom: 15px;
+`

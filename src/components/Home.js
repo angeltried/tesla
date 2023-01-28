@@ -5,32 +5,33 @@ import Section from './Section'
 function Home() {
   return (
     <Container>
-      <Section
-        title="Model S"
-        description="Order Online for Touchless Delivery"
-        backgroundImg="model-s.jpg"
-        leftBtnText="Custom order"
-        rightBtnText="Existing inventory"
+       <Section
+         title="Model 3"
+         description="Leasing starting at $399/mo"
+         backgroundImg="model-3.jpg"
+         leftBtnText="Custom order"
+         rightBtnText="Demo Drive"
       />
       <Section
        title="Model Y"
-       description="Order Online for Touchless Delivery"
+       description=""
        backgroundImg="model-y.jpg"
        leftBtnText="Custom order"
-       rightBtnText="Existing inventory"/>
-      <Section
-         title="Model 3"
-         description="Order Online for Touchless Delivery"
-         backgroundImg="model-3.jpg"
-         leftBtnText="Custom order"
-         rightBtnText="Existing inventory"
+       rightBtnText="Demo Drive"
+       />
+         <Section
+        title="Model S"
+        description=""
+        backgroundImg="model-s.jpg"
+        leftBtnText="Custom order"
+        rightBtnText="Demo Drive"
       />
       <Section
          title="Model X"
-         description="Order Online for Touchless Delivery"
+         description=""
          backgroundImg="model-x.jpg"
          leftBtnText="Custom order"
-         rightBtnText="Existing inventory"
+         rightBtnText="Demo Drive"
       />
       <Section
          title="Lowest Cost Solar Panels In America"
